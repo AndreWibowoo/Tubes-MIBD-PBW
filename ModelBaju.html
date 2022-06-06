@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Pemilik</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" href="images/icons/Logo.png" />
+    <link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="fonts/iconic/css/material-design-iconic-font.min.css">
+    <link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+    <link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
+    <link rel="stylesheet" type="text/css" href="vendor/animsition/css/animsition.min.css">
+    <link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+    <link rel="stylesheet" type="text/css" href="vendor/daterangepicker/daterangepicker.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body>
+    <div class="container-scroller">
+        <!-- partial:../../partials/_navbar.html -->
+        <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
+            <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
+                <a class="navbar-brand brand-logo"><img src="images/icons/Logo.png"
+                        alt="logo" /></a>
+            </div>
+            <div class="navbar-menu-wrapper d-flex align-items-stretch">
+                <ul class="navbar-nav navbar-nav-right">
+                    <li class="nav-item d-none d-lg-block full-screen-link">
+                        <a class="nav-link">
+                            <i class="mdi mdi-fullscreen" id="fullscreen-button"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link nav-profile" id="profileDropdown"
+                            data-toggle="dropdown" aria-expanded="false">
+                            <img src="images/sampePic/face1.jpg" alt="image">
+                            <span class="d-none d-lg-inline">Daniel Russiel</span>
+                        </a>
+                        <div class="dropdown-menu navbar-dropdown w-100" aria-labelledby="profileDropdown">
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">
+                                <i class="mdi mdi-logout mr-2 text-primary"></i>
+                                Signout
+                            </a>
+                        </div>
+                    </li>
+                    <li class="nav-item nav-logout d-none d-lg-block">
+                        <a class="nav-link" href="#">
+                            <i class="mdi mdi-power"></i>
+                        </a>
+                    </li>
+                </ul>
+                <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button"
+                    data-toggle="offcanvas">
+                    <span class="mdi mdi-menu"></span>
+                </button>
+            </div>
+        </nav>
+        <div class="container-fluid page-body-wrapper">
+            <div class="row row-offcanvas row-offcanvas-right">
+                <nav class="sidebar sidebar-offcanvas" id="sidebar">
+                    <ul class="nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="">
+                                <span class="menu-title">Model Baju</span>
+                                <i class="mdi mdi-chart-bar menu-icon"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="">
+                                <span class="menu-title">Bahan Baku</span>
+                                <i class="mdi mdi-table-large menu-icon"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="">
+                                <span class="menu-title">Aksesoris</span>
+                                <i class="mdi mdi-table-large menu-icon"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="">
+                                <span class="menu-title">Status Pengiriman</span>
+                                <i class="mdi mdi-table-large menu-icon"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="">
+                                <span class="menu-title">Biaya Jasa Jahit</span>
+                                <i class="mdi mdi-table-large menu-icon"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="">
+                                <span class="menu-title">Laporan</span>
+                                <i class="mdi mdi-table-large menu-icon"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <div class="content-wrapper">
+                    <div class="row">
+                        <div class="col-lg-12 grid-margin stretch-card grid-margin-md-0">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="card border border-primary" style="width: 14rem; ">
+                                        <img class="card-img-top" src="images/modelPic/model_1.png" alt="Card image cap">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Sleeveless cotton shirt</h5>
+                                            <p class="card-text">Rp 249.999,00</p>
+                                            <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#edit">Edit</button>
+                                            
+                                        </div>
+                                        
+                                    </div>
+                            
+                                    <div class="card border border-primary" style="width: 14rem; margin-left: 250px; margin-top: -474px;">
+                                        <img class="card-img-top" src="images/modelPic/model_1.png" alt="Card image cap">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Sleeveless cotton shirt</h5>
+                                            <p class="card-text">Rp 249.999,00</p>
+                                            <a href="#" class="btn btn-dark">Edit</a>
+                                        </div>
+                                    </div>
+                            
+                                    <div class="card border border-primary" style="width: 14rem; margin-left: 500px; margin-top: -474px;">
+                                        <img class="card-img-top" src="images/modelPic/model_1.png" alt="Card image cap">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Sleeveless cotton shirt</h5>
+                                            <p class="card-text">Rp 249.999,00</p>
+                                            <a href="#" class="btn btn-dark">Edit</a>
+                                        </div>
+                                    </div>
+                                    <div class="card border border-primary" style="width: 14rem; margin-left: 750px; margin-top: -474px;">
+                                        <img class="card-img-top" src="images/modelPic/model_1.png" alt="Card image cap">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Sleeveless cotton shirt</h5>
+                                            <p class="card-text">Rp 249.999,00</p>
+                                            <a href="#" class="btn btn-dark">Edit</a>
+                                        </div>
+                                    </div>
+                                    <div class="card border border-primary" style="width: 14rem; margin-left: 1000px; margin-top: -474px;">
+                                        <img class="card-img-top" src="images/modelPic/model_1.png" alt="Card image cap">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Sleeveless cotton shirt</h5>
+                                            <p class="card-text">Rp 249.999,00</p>
+                                            <a href="#" class="btn btn-dark">Edit</a>
+                                        </div>
+                                    </div>
+                                    <div class="card border border-primary" style="width: 14rem; margin-left: 1250px; margin-top: -474px;">
+                                        <img class="card-img-top" src="images/modelPic/model_1.png" alt="Card image cap">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Sleeveless cotton shirt</h5>
+                                            <p class="card-text">Rp 249.999,00</p>
+                                            <a href="#" class="btn btn-dark">Edit</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+</body>
+
+</html>
