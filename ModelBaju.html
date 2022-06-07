@@ -110,7 +110,48 @@
                                 <div class="card-body">
                                     <div class="">
                                         <h1>Model Baju</h1>
-                                        <a href="#">Tambah Model</a>
+                                        <a href="#" class="btn btn-success" data-toggle="modal" data-target="#tambahModel"><i class="fa fa-plus" aria-hidden="true"></i> Tambah model</a>
+                                        <div class="modal fade" id="tambahModel" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+                                                aria-hidden="true">
+                                                <div class="modal-dialog" role="document" >
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <h5 class="modal-title" id="exampleModalLongTitle">Tambah Model</h5>
+                                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                                <span aria-hidden="true">&times;</span>
+                                                            </button>
+                                                        </div>
+                                                        <div class="modal-body">
+
+                                                            <form action="" style="margin-left: 20px;">
+                                                            
+                                                                <label for="fotoModel" style="font-size: 1rem;">Pilih foto</label>
+                                                                <input type="file" id="fotoModel" name="photo" accept=".jpg, .jpeg, .png">
+                                                            </form>
+                                                            <form style="margin-left: 20px; margin-right: 20px; margin-top: -6px;">
+                                                                <div class="form-group">
+                                                                    <label for="nameModel" class="col-form-label">Nama</label>
+                                                                    <input type="text" class="form-control" id="nameModel" placeholder="Masukkan nama baru">
+                                                                </div>
+                                                                <div class="form-group" style="margin-top: -10px;">
+                                                                    <label for="hargaModel" class="col-form-label">Harga</label>
+                                                                    <input type="text" class="form-control" id="hargaModel" placeholder="Masukkan harga baru">
+                                                                </div>
+                                                                <div class="form-group" style="margin-top: -10px;">
+                                                                    <label for="KetModel" class="col-form-label">Keterangan</label>
+                                                                    <input type="text" class="form-control" id="KetModel" placeholder="Masukkan keterangan">
+                                                                </div>
+                                                            </form>
+                                                        
+                                                            
+                                                        </div>
+                                                        <div class="modal-footer">
+                                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
+                                                            <button type="button" class="btn btn-success">Tambah</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
                                     </div>
                                     <div class="card border border-primary" style="width: 14rem; margin-top: 20px;">
                                         <img class="card-img-top" src="images/modelPic/model_1.png"
@@ -132,7 +173,8 @@
                                                         </div>
                                                         <div class="modal-body">
                                                             <img src="images/modelPic/model_1.png" width="140px" style="margin-top: 10px; margin-left: 170px;">
-                                                            <a href="#" style="margin-left: 170px; font-size: 0.9rem; ">ubah foto</a>
+                                                            <a href="#" style="margin-left: 170px; font-size: 0.9rem;"><input type="file" id="fotoModel" name="photo" accept=".jpg, .jpeg, .png"></a>
+                                                            
                                                             <p style="margin-left: 20px; color: black; font-size: 1rem;">No. Model  : 0001</p>
                                                             <p style="margin-left: 20px; color: black; font-size: 1rem; margin-top: -12px;">Nama : Sleeveless cotton shirt </p>
                                                             <p style="margin-left: 20px; color: black; font-size: 1rem; margin-top: -12px;">Harga   : Rp 249.999,00</p>
