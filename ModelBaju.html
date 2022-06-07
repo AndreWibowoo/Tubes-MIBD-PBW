@@ -5,7 +5,7 @@
     <title>Pemilik</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" type="image/png" href="images/icons/Logo.png" />
+    <link rel="icon" type="image/png" href="images/icons/Icons.png" />
     <link rel="stylesheet"  href="vendor/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet"  href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet"  href="fonts/iconic/css/material-design-iconic-font.min.css">
@@ -15,6 +15,9 @@
     <link rel="stylesheet"  href="vendor/select2/select2.min.css">
     <link rel="stylesheet"  href="vendor/daterangepicker/daterangepicker.css">
     <link rel="stylesheet"  href="css/style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -62,13 +65,13 @@
                 <nav class="sidebar sidebar-offcanvas" id="sidebar">
                     <ul class="nav">
                         <li class="nav-item">
-                            <a class="nav-link" href="">
+                            <a class="nav-link" href="ModelBaju.html">
                                 <span class="menu-title">Model Baju</span>
                                 <i class="mdi mdi-chart-bar menu-icon"></i>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="">
+                            <a class="nav-link" href="BahanBaku.html">
                                 <span class="menu-title">Bahan Baku</span>
                                 <i class="mdi mdi-table-large menu-icon"></i>
                             </a>
@@ -105,14 +108,52 @@
                         <div class="col-lg-12 grid-margin stretch-card grid-margin-md-0">
                             <div class="card">
                                 <div class="card-body">
-                                    <div class="card border border-primary" style="width: 14rem; ">
+                                    <div class="">
+                                        <h1>Model Baju</h1>
+                                        <a href="#">Tambah Model</a>
+                                    </div>
+                                    <div class="card border border-primary" style="width: 14rem; margin-top: 20px;">
                                         <img class="card-img-top" src="images/modelPic/model_1.png"
                                             alt="Card image cap">
                                         <div class="card-body">
                                             <h5 class="card-title">Sleeveless cotton shirt</h5>
                                             <p class="card-text">Rp 249.999,00</p>
-                                            <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#hapus">Edit</button>
-                                        </div>
+                                            <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#myModal">Edit</button>
+                                            <a href="#" class="btn btn-dark" data-toggle="modal" data-target="#myModal">Hapus</a>
+                                            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+                                                aria-hidden="true">
+                                                <div class="modal-dialog modal-dialog-centered" role="document">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <h5 class="modal-title" id="exampleModalLongTitle">Edit Model</h5>
+                                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                                <span aria-hidden="true">&times;</span>
+                                                            </button>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                            <img src="images/modelPic/model_1.png" width="140px" style="margin-top: 10px;">
+                                                            <p style="margin-left: 170px; color: black; font-size: 1.5rem;">text</p>
+                                                            <p style="margin-left: 170px; color: black; font-size: 1rem; margin-top: -12px;">text</p>
+                                                            <p style="margin-left: 170px; color: black; font-size: 1rem; margin-top: -12px;">text</p>
+                                                            <p style="margin-left: 170px; color: black; margin-top: -12px;">text </p>
+
+                                                        
+                                                            <p style="margin-left: 110px; color: black; font-size: 1rem;">Keterangan</p>
+                                                            <p style="margin-left: 110px; color: black; font-size: 0.8rem; margin-top: -10px;">
+                                                                Bilbo Baggins lives a quiet, peaceful life in his comfortable hole at Bag End. Bilbo lives in a hole because he
+                                                                is a
+                                                                hobbit—one of a race of small, plump people about half the size of humans, with furry toes and a great love of
+                                                                good food and drink.
+                                                            </p>
+                                                        </div>
+                                                        <div class="modal-footer">
+                                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                                            <button type="button" class="btn btn-primary">Save changes</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            </div>
                                     </div>
 
                                     <div class="card border border-primary"
@@ -122,7 +163,28 @@
                                         <div class="card-body">
                                             <h5 class="card-title">Sleeveless cotton shirt</h5>
                                             <p class="card-text">Rp 249.999,00</p>
-                                            <a href="#" class="btn btn-dark">Edit</a>
+                                            <a href="#" class="btn btn-dark" data-toggle="modal" data-target="#myModal">Edit</a>
+
+                                            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+                                                aria-hidden="true">
+                                                <div class="modal-dialog" role="document">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                                <span aria-hidden="true">&times;</span>
+                                                            </button>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                            ...
+                                                        </div>
+                                                        <div class="modal-footer">
+                                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                                            <button type="button" class="btn btn-primary">Save changes</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
 
