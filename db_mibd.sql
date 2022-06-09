@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 29, 2022 at 07:54 AM
+-- Generation Time: Jun 09, 2022 at 02:10 PM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 8.1.6
 
@@ -24,6 +24,17 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `akse`
+--
+
+CREATE TABLE `akse` (
+  `id_aksesoris` int(8) NOT NULL,
+  `no_pesanan` int(8) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `aksesoris`
 --
 
@@ -32,8 +43,20 @@ CREATE TABLE `aksesoris` (
   `stok` int(8) NOT NULL,
   `jenis` varchar(16) NOT NULL,
   `harga_beli` varchar(60) NOT NULL,
-  `harga_jual` varchar(60) NOT NULL
+  `harga_jual` varchar(60) NOT NULL,
+  `fotoAksesoris` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `bahan`
+--
+
+CREATE TABLE `bahan` (
+  `id_bahan` int(8) NOT NULL,
+  `no_pesanan` int(8) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -45,7 +68,8 @@ CREATE TABLE `bahan_baku` (
   `id_bahan` int(8) NOT NULL,
   `jenis` varchar(16) NOT NULL,
   `harga_beli` varchar(60) NOT NULL,
-  `harga_jual` varchar(60) NOT NULL
+  `harga_jual` varchar(60) NOT NULL,
+  `fotoBahan` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -64,6 +88,17 @@ CREATE TABLE `kurir` (
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `model`
+--
+
+CREATE TABLE `model` (
+  `id_model` int(8) NOT NULL,
+  `no_pesanan` int(8) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `model_baju`
 --
 
@@ -71,7 +106,8 @@ CREATE TABLE `model_baju` (
   `id_model` int(8) NOT NULL,
   `ukuran` varchar(16) NOT NULL,
   `harga_beli` varchar(60) NOT NULL,
-  `harga_jual` varchar(60) NOT NULL
+  `harga_jual` varchar(60) NOT NULL,
+  `fotoModel` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -122,10 +158,46 @@ CREATE TABLE `transaksi` (
 --
 
 --
+-- Indexes for table `aksesoris`
+--
+ALTER TABLE `aksesoris`
+  ADD PRIMARY KEY (`id_aksesoris`);
+
+--
+-- Indexes for table `bahan_baku`
+--
+ALTER TABLE `bahan_baku`
+  ADD PRIMARY KEY (`id_bahan`);
+
+--
+-- Indexes for table `kurir`
+--
+ALTER TABLE `kurir`
+  ADD PRIMARY KEY (`id_kurir`);
+
+--
+-- Indexes for table `model_baju`
+--
+ALTER TABLE `model_baju`
+  ADD PRIMARY KEY (`id_model`);
+
+--
 -- Indexes for table `pengguna`
 --
 ALTER TABLE `pengguna`
   ADD PRIMARY KEY (`id_pengguna`);
+
+--
+-- Indexes for table `pesanan`
+--
+ALTER TABLE `pesanan`
+  ADD PRIMARY KEY (`no_pesanan`);
+
+--
+-- Indexes for table `transaksi`
+--
+ALTER TABLE `transaksi`
+  ADD PRIMARY KEY (`no_transaksi`);
 
 --
 -- AUTO_INCREMENT for dumped tables
